@@ -1,4 +1,5 @@
 function redirectToOffer(id){
+    debugger
     if(currentUser){
         window.location.href = "./offer.html?id=" + id;
     }

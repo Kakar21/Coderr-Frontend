@@ -17,12 +17,12 @@ function getLogedOutHeaderTemplate() {
     } else if (currentUrl.endsWith('registration.html')) {
         return `
         <div class="d_flex_cc_gm">
-            <a href="./login.html" class="std_btn btn_secondary pad_s ">Login</a>
+            <a href="./login.html" class="std_btn btn_secondary login pad_s ">Login</a>
         </div>`
     } else {
         return `
             <div class="d_flex_cc_gm">
-                <a href="./login.html" class="std_btn btn_secondary pad_s ">Login</a>
+                <a href="./login.html" class="std_btn btn_secondary login pad_s ">Login</a>
                 <a href="./registration.html" class="std_btn btn_prime pad_s  font_white_color">Registrieren</a>
             </div>`
     }

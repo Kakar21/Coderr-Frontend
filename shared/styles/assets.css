@@ -70,6 +70,12 @@
     width: 64px;
 }
 
+.login {
+    color: black;
+    border: 0;
+    font-weight: 600;
+}
+
 @media screen and (max-width: 769px) {
     .btn_round_s {
         height: 20px;
@@ -167,6 +173,15 @@
 .link {
     color: var(--link-color);
     text-decoration: none;
+}
+
+a.link:not(.a) {
+    color: black;
+    font-weight: 600;
+}
+
+a.link:not(.a):hover {
+    color: var(--btn-prime-color) !important;
 }
 
 .link:hover {
@@ -427,11 +442,24 @@ hr {
     border: var(--form-input-border);
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
 }
 
 .searchbar>input:focus {
     outline: none;
 }
+
+.searchbar>input::placeholder {
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.searchbar>input:focus::placeholder {
+    color: transparent;
+  }
 
 @media screen and (max-width: 780px) and (min-width: 480px) {
     .searchbar {
