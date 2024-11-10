@@ -54,7 +54,7 @@
                         <label for="password">Passwort</label>
                         <input onkeydown="hideFormErrors(['error_pw'])" placeholder="Passwort" class="input_field" type="password" id="password" name="password"  required>
                     </div>
-                    <p id="error_pw" class="form_error d_none">Benutzer oder Passwort falsch</p>
+                    <p id="error_pw" class="form_error d_none">Benutzername oder Passwort falsch</p>
                     <div class="d_flex_cc_gl f_d_r_resp_c w_full">
                         <p>Du hast noch kein Konto?</p>
                         <a href="./registration.html" class="link a d_flex_cc_gm">
@@ -71,12 +71,12 @@
             </div>
         </section>
         <section onclick="closeDialog('guest_login_dialog')" id="guest_login_dialog" class="dialog pad_m d_flex_cc_gm d_none">
-            <div onclick="stopProp(event)" class="m_auto small_form d_flex_cs_gl f_d_c">
+            <div onclick="stopProp(event)" class="m_auto small_form d_flex_cs_gl f_d_c" style="align-items: center;">
 
                 <h2 class="font_prime_color">Wähle einen Gastzugang</h2>
                 <div class="d_flex_cc_gl f_d_r_resp_c ">
                     <div class="card d_flex_cc_gl f_d_c ">
-                        <h3 class="font_prime_color">Demo-Anbieter</h3>
+                        <h3 class="font_prime_color" style="text-wrap: nowrap">Demo-Anbieter</h3>
                         <p>Ein Anbieter kann:</p>
                         <ul class="feature_list d_flex_cc_gm f_d_c">
                             <li>Angebote erstellen</li>

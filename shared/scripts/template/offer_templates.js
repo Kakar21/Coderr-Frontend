@@ -221,13 +221,13 @@ function getOfferDetailDialogTemplate(detail) {
                                     </div>
                                     <div class="form_group">
                                         <label for="offer_price_${detail.offer_type}">Preis (€)</label>
-                                        <input placeholder="0.00" value="${detail.price}" onkeydown="hideFormErrors(['offer_price_${detail.offer_type}_error'])" class="input_field" type="number" id="offer_price_${detail.offer_type}"
+                                        <input placeholder="0.00" value="${detail.price}" onkeydown="hideFormErrors(['offer_price_${detail.offer_type}_error'])" class="input_field price_field" type="number" min="1" id="offer_price_${detail.offer_type}"
                                             name="offer_price_${detail.offer_type}"  step="0.01" required>
                                         <p id="offer_price_${detail.offer_type}_error" class="form_error d_none">Bitte ausfüllen!</p>
                                     </div>
                                     <div class="form_group">
                                         <label for="offer_delivery_time_${detail.offer_type}">Lieferzeit (Tage)</label>
-                                        <input placeholder="0" value="${detail.delivery_time_in_days}" onkeydown="hideFormErrors(['offer_delivery_time_${detail.offer_type}_error'])" class="input_field" type="number" id="offer_delivery_time_${detail.offer_type}"
+                                        <input placeholder="0" value="${detail.delivery_time_in_days}" onkeydown="hideFormErrors(['offer_delivery_time_${detail.offer_type}_error'])" class="input_field" type="number" min="0" id="offer_delivery_time_${detail.offer_type}"
                                             name="offer_delivery_time_${detail.offer_type}" required>
                                         <p id="offer_delivery_time_${detail.offer_type}_error" class="form_error d_none">Bitte ausfüllen!</p>
                                         
@@ -246,7 +246,7 @@ function getOfferDetailDialogTemplate(detail) {
                                         <div class="form_group">
                                             <label for="offer_revisions_${detail.offer_type}">Revisionen</label>
                                             <div class="d_flex_cc_gl ">
-                                                <input value="${revisionsCount}" onkeydown="hideFormErrors(['offer_revisions_${detail.offer_type}_error'])" class="input_field " type="number" id="offer_revisions_${detail.offer_type}"
+                                                <input value="${revisionsCount}" onkeydown="hideFormErrors(['offer_revisions_${detail.offer_type}_error'])" class="input_field " type="number" min="0" id="offer_revisions_${detail.offer_type}"
                                                     name="offer_revisions_${detail.offer_type}" step="1" ${revisionsDisabled}>
                                                 <div class="form_group d_flex_cc_gm f_d_r input_checkbox_group">
                                                     <label class="text_a_e" for="offer_revisions_${detail.offer_type}_limitless">Unbegrenzt</label>

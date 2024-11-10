@@ -115,6 +115,7 @@ button {
 
 .ws_nw {
     white-space: nowrap;
+    align-self: center;
 }
 
 .text_a_e {
