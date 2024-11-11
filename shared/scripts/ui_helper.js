@@ -82,7 +82,9 @@ function formatDate(dateString) {
 
 function getPersonImgPath(filepath) {
 
-    if (filepath) {
+    if (filepath && filepath.startsWith(STATIC_BASE_URL)) {
+        return filepath
+    } else if (filepath) {
         return STATIC_BASE_URL + filepath
     } else {
         return "./assets/icons/profile_pic.svg"
@@ -155,5 +157,14 @@ function extractErrorMessages(errorObject) {
 function toggleReviewAddBtn(){
     if(currentUser.type == "business"){
         document.getElementById('review_add_btn').classList.add('d_none')
+    }
+}
+
+
+function getUserFullName(user) {
+    if (user.first_name && user.last_name) {
+        return `${user.first_name} ${user.last_name}`;
+    } else {
+        return `@${user.username}`
     }
 }

@@ -197,11 +197,11 @@ function getCustomerOrderTemplate(order){
                         </div>
                         <div class="w_full order_item_detail d_flex_cs_gm f_d_c">
                             <div class="order_info d_flex_cs_gm f_d_c">
-                                <p class="link" onclick="redirectToCustomerProfile(${order.business_user})"><strong>Anbieter:</strong> ${business_user.user.first_name} ${business_user.user.last_name}</p>
+                                <p class="link" onclick="redirectToCustomerProfile(${order.business_user})"><strong>Anbieter:</strong> ${getUserFullName(business_user.user)}</p>
                                 <p><strong>Titel:</strong> ${order.title}</p>
                                 <p><strong>Lieferzeit:</strong> ${order.delivery_time_in_days} Tage</p>
                                 <p><strong>Revisionen:</strong> ${getOrderRevisionTemplate(order.revisions)} </p>
-                                <p><strong>Preis:</strong> ${parseFloat(order.price).toFixed(2)}€</p>
+                                <p><strong>Preis:</strong> ${parseFloat(order.price).toFixed(2).replace(".", ",")}€</p>
                                 <ul class="feature_list">
                                     ${getOrderFeatureListTemplate(order.features)}
                                 </ul>
@@ -240,4 +240,3 @@ function getCustomerReviewDialogWrapperTemplate(){
             </section>
     `
 }
-

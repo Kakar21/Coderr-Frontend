@@ -71,7 +71,7 @@ function getOfferTemplate(offer){
                         <p>${getUpdateOrCreateDate(offer)}</p>
                         <div class="d_flex_cs_gm f_d_c">
                             <p class="font_sec_color">ab ${offer.min_delivery_time} Tage Lieferzeit</p>
-                            <h3 class="font_prime_color">ab ${offer.min_price} €</h3>
+                            <h3 class="font_prime_color">ab ${offer.min_price.replace(".", ",")} €</h3>
                         </div>
                     </div>
                 </div>`
@@ -106,7 +106,7 @@ function getBusinessOfferTemplate(offer) {
                         <p>${offer.description}</p>
                         <div class="d_flex_cs_gm f_d_c">
                             <p class="font_sec_color">ab ${offer.min_delivery_time} Tage Lieferzeit</p>
-                            <h3 class="font_prime_color">ab ${offer.min_price} €</h3>
+                            <h3 class="font_prime_color">ab ${offer.min_price.replace(".", ",")} €</h3>
                         </div>
                         <button onclick="redirectToOffer(${offer.id})" class="std_btn btn_prime d_flex_cc_gm ">Zum Angebot</button>
                     </div>
@@ -221,7 +221,7 @@ function getOfferDetailDialogTemplate(detail) {
                                     </div>
                                     <div class="form_group">
                                         <label for="offer_price_${detail.offer_type}">Preis (€)</label>
-                                        <input placeholder="0.00" value="${detail.price}" onkeydown="hideFormErrors(['offer_price_${detail.offer_type}_error'])" class="input_field price_field" type="number" min="1" id="offer_price_${detail.offer_type}"
+                                        <input placeholder="0,00" value="${detail.price}" onkeydown="hideFormErrors(['offer_price_${detail.offer_type}_error'])" class="input_field price_field" type="number" min="1" id="offer_price_${detail.offer_type}"
                                             name="offer_price_${detail.offer_type}"  step="0.01" required>
                                         <p id="offer_price_${detail.offer_type}_error" class="form_error d_none">Bitte ausfüllen!</p>
                                     </div>

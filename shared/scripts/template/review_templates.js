@@ -27,9 +27,9 @@ function getReviewWLinkTemplate(review, business_user, reviewer) {
     return `
                         <div class="card d_flex_cs_gm f_d_c">
                             <div class="d_flex_cs_gm f_d_r_resp_c">
-                                <img class="profile_img_small" src="${getPersonImgPath(reviewer.user.file)}" alt="Benutzeravatar">
+                                <img class="profile_img_small" src="${getPersonImgPath(reviewer.file)}" alt="Benutzeravatar">
                                 <div>
-                                    <h3 class="link c_black w_full" onclick="redirectToCustomerProfile(${reviewer.user.pk})">${reviewer.user.first_name} ${reviewer.user.last_name}</h3>
+                                    <h3 class="link c_black w_full" onclick="redirectToCustomerProfile(${reviewer.user.pk})">${getUserFullName(reviewer.user)}</h3>
                                     <div class="review_stars">
                                         ${getStarsTemplate(review.rating)}
                                     </div>
@@ -75,7 +75,7 @@ function getReviewEditableTemplate(review, business_user, reviewer) {
                             <img src="./assets/icons/more_vert.svg" alt="" srcset="">
                         </button>
                         <div class="d_flex_cs_gm f_d_r_resp_c">
-                            <img class="profile_img_small" src="${getPersonImgPath(reviewer.user.file)}" alt="Benutzeravatar">
+                            <img class="profile_img_small" src="${getPersonImgPath(reviewer.file)}" alt="Benutzeravatar">
                             <div>
                                 <div class="d_flex_cc_gm">
                                     <h3 class="c_black w_full">${reviewer.user.first_name} ${reviewer.user.last_name}</h3>
