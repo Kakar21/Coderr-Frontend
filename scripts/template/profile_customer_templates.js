@@ -201,7 +201,7 @@ function getCustomerOrderTemplate(order){
                                 <p><strong>Titel:</strong> ${order.title}</p>
                                 <p><strong>Lieferzeit:</strong> ${order.delivery_time_in_days} Tage</p>
                                 <p><strong>Revisionen:</strong> ${getOrderRevisionTemplate(order.revisions)} </p>
-                                <p><strong>Preis:</strong> ${parseFloat(order.price).toFixed(2).replace(".", ",")}€</p>
+                                <p><strong>Preis:</strong> ${parseFloat(order.price).toFixed(2).toString().replace(".", ",")}€</p>
                                 <ul class="feature_list">
                                     ${getOrderFeatureListTemplate(order.features)}
                                 </ul>

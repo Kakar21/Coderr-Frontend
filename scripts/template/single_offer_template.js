@@ -35,7 +35,7 @@ function getSingleOfferDetailTemplate(){
         return `<div>Es ist ein Fehler aufgetreten</div>`;
     }
     return `
-        <h3 class="font_prime_color">${currentOpenedDetail.price.replace(".", ",")} €</h3>
+        <h3 class="font_prime_color">${currentOpenedDetail.price.toString().replace(".", ",")} €</h3>
                         <h3>${currentOpenedDetail.title}</h3>
                         <p class="d_flex_cc_gm">
                             <img src="./assets/icons/schedule.svg" alt="Lieferzeit Icon" class="icon">
@@ -109,7 +109,7 @@ function getShowOrderDialogContentTemplate(){
 
                     <p>
                         <strong>Gesamtpreis:</strong>
-                        <strong class="font_prime_color ">${currentOpenedDetail.price.replace(".", ",")} €</strong>
+                        <strong class="font_prime_color ">${currentOpenedDetail.price.toString().replace(".", ",")} €</strong>
                     </p>
                     <div class="d_flex_cs_gl">
                         <button onclick="singleOfferOrderCreate()" class="std_btn btn_prime pad_s">Kostenpflichtig bestellen</button>
